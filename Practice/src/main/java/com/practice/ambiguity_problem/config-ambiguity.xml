@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd">
+  
+  <bean class="com.practice.ambiguity_problem.Addition" name="add">
+  <!-- 
+   it will insert the values in the first constructor
+ 	<constructor-arg value="21" />
+ 	<constructor-arg value="21" />
+ 	
+   it will insert the values in the suitable constructor
+ 	<constructor-arg value="21" type="int" />
+ 	<constructor-arg value="21" type="int" />
+ 	 -->
+ <!--  it will insert the values in the suitable constructor and at the defined index as well -->
+ 	<constructor-arg value="21" type="int" index="1" />
+ 	<constructor-arg value="21" type="int" index="0" />
+  </bean>
+
+</beans>
