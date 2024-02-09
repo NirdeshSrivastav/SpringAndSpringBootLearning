@@ -9,7 +9,13 @@
   http://www.springframework.org/schema/context
   http://www.springframework.org/schema/context/spring-context.xsd">
   
-  <bean class="com.practice.spring_lifecycle.Addition" name="add" p:num1="101" p:num2="202" init-method="init" destroy-method="destroy"/>
   
+  <!-- <bean class="com.practice.spring_lifecycle.Addition" name="add" p:num1="101" p:num2="202" init-method="init" destroy-method="destroy"/> -->
+  
+  <!-- <bean class="com.practice.spring_lifecycle.Multiplication" name="mul1" p:a="101" p:b="202" /> -->
+  <bean class=" com.practice.spring_lifecycle.Annotation_Lifecycle" name="ann" p:name="SAFAL SHRIVASTAV" /> 
+  
+  <!-- to enable only those two Lifecycle annotations -->
+	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
   
 </beans>
